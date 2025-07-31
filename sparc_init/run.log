@@ -1,0 +1,59 @@
+Global frequency set at 1000000000000 ticks per second
+warn: No dot file generated. Please install pydot to generate the dot file and pdf.
+src/arch/sparc/linux/se_workload.cc:60: warn: Unknown operating system; assuming Linux.
+src/base/statistics.hh:279: warn: One of the stats is a legacy stat. Legacy stat is a stat that does not belong to any statistics::Group. Legacy stat is deprecated.
+      0: system.cpu0: Constructing CPU with id 0, socket id 0
+src/arch/sparc/linux/se_workload.cc:60: warn: Unknown operating system; assuming Linux.
+      0: system.cpu1: Constructing CPU with id 1, socket id 0
+system.remote_gdb: Listening for connections on port 7000
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 23.0.0.1
+gem5 compiled Jul 31 2025 09:09:30
+gem5 started Jul 31 2025 10:34:14
+gem5 executing on ritam-ASUS-TUF-Gaming-F15-FX506LI-FX506LI, pid 23755
+command line: ./build/SPARC/gem5.opt --debug-flags=SyscallVerbose,VtoPhys dual_core_config.py --matrix-dim=128
+
+Beginning simulation!
+src/sim/simulate.cc:194: info: Entering event queue @ 0.  Starting simulation...
+36600000: system.cpu0: T0 : syscall brk: break point changed to: 0X44C70
+36650000: system.cpu1: T0 : syscall brk: break point changed to: 0X44C70
+46270000: system.cpu0: T0 : syscall brk: break point changed to: 0X45D40
+46320000: system.cpu1: T0 : syscall brk: break point changed to: 0X45D40
+src/sim/syscall_emul.cc:74: warn: ignoring syscall ioctl(...)
+src/sim/syscall_emul.cc:74: warn: ignoring syscall ioctl(...)
+src/sim/syscall_emul.cc:74: warn: ignoring syscall ioctl(...)
+src/sim/syscall_emul.cc:74: warn: ignoring syscall ioctl(...)
+159590000: system.cpu0: T0 : syscall open: sim_fd[5], target_fd[3] -> path:/home/ritam/gem5/gem5/my_output.txt
+(inferred from:my_output.txt)
+159640000: system.cpu1: T0 : syscall open: sim_fd[6], target_fd[3] -> path:/home/ritam/gem5/gem5/my_output.txt
+(inferred from:my_output.txt)
+488340000: system.cpu0: T0 : syscall brk: break point changed to: 0X47D40
+490660000: system.cpu1: T0 : syscall brk: break point changed to: 0X47D40
+491340000: system.cpu0: T0 : syscall brk: break point changed to: 0X48000
+493660000: system.cpu1: T0 : syscall brk: break point changed to: 0X48000
+643490000: system.cpu0: T0 : syscall open: failed -> path:/dev/shm/matrix_A (inferred from:/dev/shm/matrix_A)
+645550000: system.cpu1: T0 : syscall open: failed -> path:/dev/shm/matrix_B (inferred from:/dev/shm/matrix_B)
+744910000: system.cpu0: T0 : syscall open: sim_fd[7], target_fd[4] -> path:/dev/shm/matrix_A
+(inferred from:/dev/shm/matrix_A)
+746970000: system.cpu1: T0 : syscall open: sim_fd[8], target_fd[4] -> path:/dev/shm/matrix_B
+(inferred from:/dev/shm/matrix_B)
+src/sim/syscall_emul.hh:1892: warn: mmap: writing to shared mmap region is currently unsupported. The write succeeds on the target, but it will not be propagated to the host or shared mappings
+749420000: system.cpu0: T0 : syscall  mmap range is 0x5000000 - 0x501ffff
+749420000: system.cpu0: T0 : syscall Created new host mirror mapping at 0x7a1c8a68c000 for sim_fd=7 offset=0
+751480000: system.cpu1: T0 : syscall  mmap range is 0x6000000 - 0x601ffff
+751480000: system.cpu1: T0 : syscall Created new host mirror mapping at 0x7a1c8a64c000 for sim_fd=8 offset=0
+38909770000: system.cpu0: T0 : syscall open: sim_fd[7], target_fd[4] -> path:/home/ritam/gem5/gem5/core0_out.txt
+(inferred from:core0_out.txt)
+38911760000: system.cpu1: T0 : syscall open: sim_fd[8], target_fd[4] -> path:/home/ritam/gem5/gem5/core1_out.txt
+(inferred from:core1_out.txt)
+966479790000: system.cpu0: T0 : syscall open: sim_fd[7], target_fd[4] -> path:/dev/shm/matrix_B
+(inferred from:/dev/shm/matrix_B)
+966482770000: system.cpu0: T0 : syscall  mmap range is 0x6000000 - 0x601ffff
+966482770000: system.cpu0: T0 : syscall Reusing existing host mapping at 0x7a1c8a68c000 for sim_fd=7 offset=0
+966595440000: system.cpu1: T0 : syscall open: sim_fd[7], target_fd[4] -> path:/dev/shm/matrix_A
+(inferred from:/dev/shm/matrix_A)
+966598420000: system.cpu1: T0 : syscall  mmap range is 0x5000000 - 0x501ffff
+966598420000: system.cpu1: T0 : syscall Reusing existing host mapping at 0x7a1c8a68c000 for sim_fd=7 offset=0
+Exiting @ tick 966936730000 because exiting with last active thread context

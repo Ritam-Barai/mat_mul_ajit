@@ -1,0 +1,14 @@
+Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 23.0.0.1
+gem5 compiled Jul 23 2025 07:57:18
+gem5 started Jul 23 2025 19:27:00
+gem5 executing on ritam-ASUS-TUF-Gaming-F15-FX506LI-FX506LI, pid 8768
+command line: ./build/X86/gem5.opt dual_core_config.py --matrix-dim=64
+
+Beginning simulation!
+Matrix A initialised with start address: 0x4000000
+Matrix B initialised with start address: 0x5000000
+Exiting @ tick 267177350000 because exiting with last active thread context

@@ -1,0 +1,99 @@
+make MATRIX_DIM=128
+[CLEAN] Removing old output...
+rm -rf /home/ritam/gem5/gem5/m5out
+./cleanup 128
+rm -f init_A init_B core0_out.txt core1_out.txt my_output.txt cleanup
+[BUILD] Compiling init_A...
+sparc-linux-gcc -O2 -static  -D INIT_A -o init_A init_ab.c
+chmod +x init_A
+ls -l init_A
+-rwxrwxr-x 1 ritam ritam 148640 Jul 31 10:34 init_A
+[BUILD] Compiling init_B...
+sparc-linux-gcc -O2 -static  -D INIT_B -o init_B init_ab.c
+chmod +x init_B
+ls -l init_B
+-rwxrwxr-x 1 ritam ritam 148640 Jul 31 10:34 init_B
+[BUILD] Compiling cleanup...
+sparc-linux-gcc -O2 -static  -o cleanup cleanup_mem.c
+chmod +x cleanup
+[RUN] Starting gem5 dual-core sim...
+./build/SPARC/gem5.opt --debug-flags=SyscallVerbose,VtoPhys dual_core_config.py --matrix-dim=128 > /home/ritam/gem5/gem5/run.log 2>&1
+[RESULT] Simulation tick count:
+simTicks                                 966936730000                       # Number of ticks simulated (Tick)
+[METRICS] L1 DCache Load Hit and Misses per core:
+Core 0:
+system.cpu0.numCycles                        96682078                       # Number of cpu cycles simulated (Cycle)
+system.l1d0.ReadReq.hits::total               4912658                       # number of ReadReq hits (Count)
+system.l1d0.overallMisses::total                 4273                       # number of overall misses (Count)
+Core 1:
+system.cpu1.numCycles                        96693673                       # Number of cpu cycles simulated (Cycle)
+system.l1d1.ReadReq.hits::total               4913111                       # number of ReadReq hits (Count)
+system.l1d1.overallMisses::total                 4275                       # number of overall misses (Count)
+
+
+make MATRIX_DIM=64
+[CLEAN] Removing old output...
+rm -rf /home/ritam/gem5/gem5/m5out
+./cleanup 64
+rm -f init_A init_B core0_out.txt core1_out.txt my_output.txt cleanup
+[BUILD] Compiling init_A...
+sparc-linux-gcc -O2 -static  -D INIT_A -o init_A init_ab.c
+chmod +x init_A
+ls -l init_A
+-rwxrwxr-x 1 ritam ritam 148640 Jul 31 12:16 init_A
+[BUILD] Compiling init_B...
+sparc-linux-gcc -O2 -static  -D INIT_B -o init_B init_ab.c
+chmod +x init_B
+ls -l init_B
+-rwxrwxr-x 1 ritam ritam 148640 Jul 31 12:16 init_B
+[BUILD] Compiling cleanup...
+sparc-linux-gcc -O2 -static  -o cleanup cleanup_mem.c
+chmod +x cleanup
+[RUN] Starting gem5 dual-core sim...
+./build/SPARC/gem5.opt --debug-flags=SyscallVerbose,VtoPhys dual_core_config.py --matrix-dim=64 > /home/ritam/gem5/gem5/run.log 2>&1
+[RESULT] Simulation tick count:
+simTicks                                 242586530000                       # Number of ticks simulated (Tick)
+[METRICS] L1 DCache Load Hit and Misses per core:
+Core 0:
+system.cpu0.numCycles                        24242232                       # Number of cpu cycles simulated (Cycle)
+system.l1d0.ReadReq.hits::total               1232958                       # number of ReadReq hits (Count)
+system.l1d0.overallMisses::total                  820                       # number of overall misses (Count)
+Core 1:
+system.cpu1.numCycles                        24258653                       # Number of cpu cycles simulated (Cycle)
+system.l1d1.ReadReq.hits::total               1233582                       # number of ReadReq hits (Count)
+system.l1d1.overallMisses::total                  822                       # number of overall misses (Count)
+
+
+make MATRIX_DIM=32
+[CLEAN] Removing old output...
+rm -rf /home/ritam/gem5/gem5/m5out
+./cleanup 32
+rm -f init_A init_B core0_out.txt core1_out.txt my_output.txt cleanup
+[BUILD] Compiling init_A...
+sparc-linux-gcc -O2 -static  -D INIT_A -o init_A init_ab.c
+chmod +x init_A
+ls -l init_A
+-rwxrwxr-x 1 ritam ritam 148640 Jul 31 12:17 init_A
+[BUILD] Compiling init_B...
+sparc-linux-gcc -O2 -static  -D INIT_B -o init_B init_ab.c
+chmod +x init_B
+ls -l init_B
+-rwxrwxr-x 1 ritam ritam 148640 Jul 31 12:17 init_B
+[BUILD] Compiling cleanup...
+sparc-linux-gcc -O2 -static  -o cleanup cleanup_mem.c
+chmod +x cleanup
+[RUN] Starting gem5 dual-core sim...
+./build/SPARC/gem5.opt --debug-flags=SyscallVerbose,VtoPhys dual_core_config.py --matrix-dim=32 > /home/ritam/gem5/gem5/run.log 2>&1
+[RESULT] Simulation tick count:
+simTicks                                  61625230000                       # Number of ticks simulated (Tick)
+[METRICS] L1 DCache Load Hit and Misses per core:
+Core 0:
+system.cpu0.numCycles                         6156775                       # Number of cpu cycles simulated (Cycle)
+system.l1d0.ReadReq.hits::total                313073                       # number of ReadReq hits (Count)
+system.l1d0.overallMisses::total                  250                       # number of overall misses (Count)
+Core 1:
+system.cpu1.numCycles                         6162523                       # Number of cpu cycles simulated (Cycle)
+system.l1d1.ReadReq.hits::total                313288                       # number of ReadReq hits (Count)
+system.l1d1.overallMisses::total                  250                       # number of overall misses (Count)
+
+

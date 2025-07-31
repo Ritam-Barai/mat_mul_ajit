@@ -1,0 +1,4 @@
+Matrix A initialised with start address: 0x5000000 and first element:0.315666
+Matrix B initialised with start address: 0x6000000 and first element:0.677612
+Matrix B accessed with start address: 0x6000000 and first element:0.000000
+Matrix A accessed with start address: 0x5000000 and first element:0.000000
